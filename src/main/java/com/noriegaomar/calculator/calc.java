@@ -17,8 +17,9 @@ public class calc {
     float n = 0;
     int n3 =1;
     float n4 =1;
+    String action = null;
     for (String retval: path.split("/")) {
-    
+        action = operation;
         switch (operation) {
             case "add":
             n = n + Integer.valueOf(retval);
@@ -35,7 +36,7 @@ public class calc {
                 n = n4;
                 break;
             default: 
-                operation = "Función "+operation+" no existe";
+                operation = "Función "+action+" no existe";
                 n =0;
                         }
         } 
